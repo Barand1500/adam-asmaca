@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Ubuntu:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    background: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.game{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: 0px auto;
+}
+
+.word,
+.figure,
+.board{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+}
+
+.word{
+    height: 300px;
+    min-width: 600px;
+}
+
+.figure{
+    position: relative;
+    height: 300px;
+    min-width: 400px;
+}
+
+.board{
+    margin: 0px auto;
+    padding: 0.5rem;
+    min-width: 30vh;
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: repeat(10,50px);gap:10px;
+}
+
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    color: rgb(0, 0, 0);
+}
+
+.lettersquare{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    transition: background 0.2s ease;
+    pointer-events: all;
+}
+
+.lettersquare:hover{
+    background: lightgray;
+    color: black;
+}
+
+.wrong{
+    background: red;
+    pointer-events: none;
+}
+
+.correct{
+    background-color: rgb(13, 200, 13);
+    pointer-events: none;
+}
+
+.close{
+    pointer-events: none;
+}
+
+.show{
+    color: white;
+}
+
+.standleg{
+    position: absolute;
+    left: 70px;
+    height: 290px;
+    width: 20px;
+    background: brown;
+}
+
+.standarm{
+    position: absolute;
+    top: 2px;
+    left: 70px;
+    height: 20px;
+    width: 170px;
+    background-color: brown;
+}
+
+.standsupport{
+    position: absolute;
+    top: 35px;
+    left: 65px;
+    height: 20px;
+    width: 100px;
+    transform: rotate(-45deg);
+    background-color: brown;
+}
+
+.rope{
+    position: absolute;
+    top: 2px;
+    width: 10px;
+    height: 40px;
+    background-color: gray;
+}
+
+.head{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    border-radius:50% ;
+    border: 2px solid white;
+    z-index: 1;
+}
+
+.body{
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    height:100px ;
+    width: 4px;
+    border: 2px solid white;
+}
+
+.rightarm{
+    position: absolute;
+    top: 100px;
+    left: 45%;
+    transform: translateX(-50%) rotate(45deg);
+    height: 60px;
+    width: 4px;
+    border: 2px solid white;
+}
+
+.leftarm{
+    position: absolute;
+    top: 100px;
+    left: 55%;
+    transform: translateX(-50%) rotate(-45deg);
+    height: 60px;
+    width: 4px;
+    border: 2px solid white;
+}
+
+.rightleg{
+    position: absolute;
+    top: 180px;
+    left: 45%;
+    transform:translateX(-50%) rotate(45deg) ;
+    height: 60px;
+    width: 4px;
+    border: 2px solid white;
+}
+
+.leftleg{
+    position: absolute;
+    top: 180px;
+    left: 55%;
+    transform:translateX(-50%) rotate(-45deg) ;
+    height: 60px;
+    width: 4px;
+    border: 2px solid white;
+}
+
+.dick{
+    position: absolute;
+    top: 194px;
+    left: 50%;
+    transform: translateX(-50%);
+    height:30px ;
+    width: 4px;
+    border: 2px solid white;
+}
